@@ -1,0 +1,18 @@
+{
+  "Login": "Masuk",
+  "login_instruction": "Isilah form username dan password dibawah ini untuk mengakses aplikasi :app_name",
+  "register_instruction": "Silahkan mengisi data anda dibawah ini untuk register :app_name",
+  "Account Information": "Informasi Akun",
+  "Alumni Information": "Informasi Alumni",
+  "Please select one": "Silahkan pilih salah satu",
+  "Grade": "Jenjang",
+  "Major": "Jurusan",
+  "Entry year": "Tahun masuk",
+  "Graduation year": "Tahun lulus",
+  "Name": "Nama",
+  "Profession": "Profesi / Jabatan",
+  "Instantion / Company": "Nama Instansi / Perusahaan",
+  "Location": "Lokasi",
+  "Start year": "Tahun mulai",
+  "End year": "Tahun selesai"
+}

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Radikal";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(../fonts/radikal-thin.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Radikal";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/radikal-light.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Radikal";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/radikal.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Radikal";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/radikal-bold.otf) format("truetype");
+}
