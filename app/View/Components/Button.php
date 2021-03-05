@@ -60,20 +60,20 @@ class Button extends Component
     {
         switch ($this->attributes['color']) {
             case 'primary':
-                return 'shadow-md border-transparent text-white bg-primary hover:bg-primary-600 active:bg-primary-600 focus:bg-primary-700 focus:border-gray-900';
+                return 'border-transparent text-white bg-primary hover:bg-primary-600 active:bg-primary-600 focus:bg-primary-700 focus:border-gray-900';
                 break;
             case 'white':
-                return 'shadow-md border-transparent text-gray-800 bg-white hover:bg-gray-200 active:bg-gray-100 focus:bg-gray-200 focus:border-gray-900';
+                return 'border-transparent text-gray-800 bg-white hover:bg-gray-200 active:bg-gray-100 focus:bg-gray-200 focus:border-gray-900';
                 break;
             case 'transparent':
-                return 'shadow-md border-transparent text-gray-800 bg-transparent hover:text-gray-600 active:text-gray-700 focus:text-gray-600';
+                return 'border-transparent text-gray-800 bg-transparent hover:text-gray-600 active:text-gray-700 focus:text-gray-600';
                 break;
             case 'transparent-dark':
-                return 'shadow-md border-transparent text-white bg-transparent hover:text-gray-100 active:text-gray-200 focus:text-gray-100';
+                return 'border-transparent text-white bg-transparent hover:text-gray-100 active:text-gray-200 focus:text-gray-100';
                 break;
             default:
                 # code...
-                return 'shadow-md border-transparent text-white bg-gray-800 hover:bg-gray-700 active:bg-gray focus:bg-gray-900 focus:border-gray-900';
+                return 'border-transparent text-white bg-gray-800 hover:bg-gray-700 active:bg-gray focus:bg-gray-900 focus:border-gray-900';
                 break;
         }
     }

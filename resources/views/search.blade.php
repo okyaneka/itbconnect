@@ -26,13 +26,13 @@
       </div>
 
       <div class="flex justify-end gap-2">
-          <x-button href="#" color="white">
+          <x-button class="shadow-md" href="#" color="white">
             <div class="ri-arrow-left-s-fill"></div>
           </x-button>
-          <x-button href="#" color="primary">1</x-button>
-          <x-button href="#" color="white">2</x-button>
-          <x-button href="#" color="white">3</x-button>
-          <x-button href="#" color="white">
+          <x-button class="shadow-md" href="#" color="primary">1</x-button>
+          <x-button class="shadow-md" href="#" color="white">2</x-button>
+          <x-button class="shadow-md" href="#" color="white">3</x-button>
+          <x-button class="shadow-md" href="#" color="white">
             <div class="ri-arrow-right-s-fill"></div>
           </x-button>
       </div>
