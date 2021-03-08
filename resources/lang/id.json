@@ -10,9 +10,11 @@
   "Entry year": "Tahun masuk",
   "Graduation year": "Tahun lulus",
   "Name": "Nama",
-  "Profession": "Profesi / Jabatan",
+  "Profession": "Profesi",
   "Instantion / Company": "Nama Instansi / Perusahaan",
   "Location": "Lokasi",
   "Start year": "Tahun mulai",
-  "End year": "Tahun selesai"
+  "End year": "Tahun selesai",
+  "Field of business": "Bidang bisnis",
+  "Business information": "Informasi bisnis"
 }
