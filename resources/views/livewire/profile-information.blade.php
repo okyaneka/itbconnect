@@ -1,4 +1,4 @@
-<div class="transition-all duration-300" x-data="{mainPhotoPreview: null, profilePhotoPreview: null}">
+<form x-data="{mainPhotoPreview: null, profilePhotoPreview: null}" method="POST">
 	<input type="file" class="hidden" x-ref="mainPhoto" name="main_photo" x-on:change="
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -332,9 +332,9 @@
 
 			<div class="flex justify-end">
 				<div wire:click="save">
-					<x-button type="button" color="primary">{{ __('Save') }}</x-button>
+					<x-button color="primary">{{ __('Save') }}</x-button>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</form>
