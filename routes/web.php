@@ -29,4 +29,20 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/u/{username}', function ($username) {
         return view('user', compact('username'));
     })->name('user');
+
+    Route::get('/user/business', function () {
+        return view('business');
+    })->name('business.show');
+
+    Route::get('/user/message', function () {
+        return view('message');
+    })->name('message.show');
+
+    Route::get('/user/ayo-beresin', function () {
+        return view('feature-1');
+    })->name('feature1.show');
+
+    Route::get('/user/loker', function () {
+        return view('feature-2');
+    })->name('feature2.show');
 });

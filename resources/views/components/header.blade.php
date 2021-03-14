@@ -1,7 +1,9 @@
 <div class="bg-primary text-white">
   <div class="container p-4 flex justify-between items-center mx-auto">
     <div class="text-lg px-4 w-1/5">
-      <x-jet-application-mark class="block h-9 w-auto" />
+      <a class="inline-block" href="{{ url('/') }}">
+        <x-jet-application-mark class="block h-9 w-auto" />
+      </a>
     </div>
     @csrf
     <form class="block flex mx-4 w-3/5" action="{{ route('search') }}" method="GET">
@@ -64,8 +66,8 @@
       </script>
     </form>
 
-    <div class="text-lg flex justify-end w-1/5">
-      <x-button color="transparent-dark" class="h-full" icon><i class="ri-chat-4-fill"></i></x-button>
+    <div class="text-lg flex justify-end w-1/5 items-center">
+      <x-button color="transparent-dark" class="h-full" icon><i class="text-xl ri-question-answer-line"></i></x-button>
       <x-jet-dropdown align="right" width="48">
         <x-slot name="trigger">
           @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())

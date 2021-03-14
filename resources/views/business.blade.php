@@ -1,7 +1,7 @@
 <x-profile-layout>
   <x-slot name="header">
-    {{ __('Profile') }}
+    {{ __('Bisnis Saya') }}
   </x-slot>
 
-  @livewire('profile-information')
+  @livewire('business-information')
 </x-profile-layout>

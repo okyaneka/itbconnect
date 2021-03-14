@@ -62,6 +62,12 @@ class Button extends Component
             case 'primary':
                 return 'border-transparent text-white bg-primary hover:bg-primary-600 active:bg-primary-600 focus:bg-primary-700 focus:border-gray-900';
                 break;
+            case 'warning':
+                return 'border-transparent bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-600 focus:bg-yellow-700 focus:border-gray-900';
+                break;
+            case 'error':
+                return 'border-transparent text-white bg-red-500 hover:bg-red-600 active:bg-red-600 focus:bg-red-700 focus:border-gray-900';
+                break;
             case 'white':
                 return 'border-transparent text-gray-800 bg-white hover:bg-gray-200 active:bg-gray-100 focus:bg-gray-200 focus:border-gray-900';
                 break;
@@ -82,9 +88,9 @@ class Button extends Component
     {
         if ($this->attributes['icon']) {
             unset($this->attributes['icon']);
-            return 'px-4 pt-1 pb-0';
+            return 'px-2 pt-1 pb-0';
         }
-        return 'px-4 pt-3 pb-2';
+        return 'px-2 pt-3 pb-2';
     }
 
     private function outlined_color()

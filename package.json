@@ -22,6 +22,7 @@
         "tailwindcss": "^2.0.1"
     },
     "dependencies": {
-        "remixicon": "^2.5.0"
+        "remixicon": "^2.5.0",
+        "tailwind-editor": "^0.1.0"
     }
 }
