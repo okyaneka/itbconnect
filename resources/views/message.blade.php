@@ -3,7 +3,7 @@
     {{ __('Message') }}
   </x-slot>
 
-  <div class="max-h-96 flex space-x-4 items-stretch">
+  <div class="h-96 flex space-x-4 items-stretch">
     <div class="flex-auto w-3/4 relative">
       <div class="max-h-full pb-16 flex flex-col space-y-2 text-white">
         <div class="flex justify-center">
@@ -31,7 +31,7 @@
         <a href="#"
           class="{{ $i == 1 ? 'bg-opacity-100 text-white' : 'bg-opacity-0'}} block items-center flex px-4 py-1 space-x-2 rounded m-2 bg-primary-500 hover:bg-opacity-100 hover:text-white">
           <div class="ri-user-fill"></div>
-          <div class="p-2 ">User {{ $i + 1 }}</div>
+          <div class="px-2 py-1 ">User {{ $i + 1 }}</div>
         </a>
       @endfor
     </div>
