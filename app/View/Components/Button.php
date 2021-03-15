@@ -88,7 +88,7 @@ class Button extends Component
     {
         if ($this->attributes['icon']) {
             unset($this->attributes['icon']);
-            return 'px-2 pt-1 pb-0';
+            return 'h-10 w-10';
         }
         return 'px-2 pt-3 pb-2';
     }

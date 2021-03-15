@@ -4,9 +4,9 @@
       <div class="absolute w-full h-full overflow-hidden">
         <div class="flex flex-nowrap h-full w-full transition-all ease-in-out duration-1000 slide relative left-0">
           <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
-            style="background-image: url(/images/slide-1.jpg)">
+            style="background-image: url('{{ url('/images/ITB Connect_Web-alt size.png') }}')">
             <div class="container mx-auto">
-              <div class="text-5xl">
+              <div class="text-3xl">
                 Type your title here
               </div>
               <div class="text-xl">
@@ -15,10 +15,10 @@
               <x-button href="#" color="primary">Button</x-button>
             </div>
           </div>
-          <div class="w-full h-full bg-red-500 text-white flex flex-none items-center text-5xl px-16 bg-center bg-cover"
-            style="background-image: url(/images/slide-2.jpg)">
+          <div class="w-full h-full bg-red-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
+            style="background-image: url('{{ url('/images/ITB Connect2_Web-alt size.png') }}')">
             <div class="container mx-auto">
-              <div class="text-5xl">
+              <div class="text-3xl">
                 Type your title here
               </div>
               <div class="text-xl">
@@ -27,10 +27,10 @@
               <x-button href="#" color="primary">Button</x-button>
             </div>
           </div>
-          <div class="w-full h-full bg-primary text-white flex flex-none items-center text-5xl px-16 bg-center bg-cover"
-            style="background-image: url(/images/slide-3.jpg)">
+          <div class="w-full h-full bg-primary text-white flex flex-none items-center px-16 bg-center bg-cover"
+            style="background-image: url('{{ url('/images/ITB Connect3_Web-alt size.png') }}')">
             <div class="container mx-auto">
-              <div class="text-5xl">
+              <div class="text-3xl">
                 Type your title here
               </div>
               <div class="text-xl">
