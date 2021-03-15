@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <link rel="shortcut icon" href="{{ url('/images/Sketch_Ai-03.png') }}" type="image/x-icon">
 
   <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -30,7 +31,7 @@
   </div>
   
   <div class="flex">
-    <div class="mt-14 w-64 h-screen bg-primary-500 bg-opacity-20 fixed overflow-y-auto shadow border-gray-300 border-r">
+    <div class="mt-14 w-64 bg-primary-500 bg-opacity-20 fixed overflow-y-auto shadow border-gray-300 border-r" style="height: calc(100vh - 56px)">
       <div class="py-8 flex items-center flex-col space-y-4">
         <div
           class="rounded-full flex-none md:h-24 md:w-24 h-20 w-20 bg-primary bg-center bg-cover border-2 border-primary"

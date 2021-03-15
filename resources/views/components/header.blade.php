@@ -1,7 +1,7 @@
 <div class="bg-primary text-white">
-  <div class="container p-4 flex justify-between items-center mx-auto">
-    <div class="text-lg px-4 w-1/5">
-      <a class="inline-block" href="{{ url('/') }}">
+  <div class="container px-4 py-2 flex justify-between items-center mx-auto">
+    <div class="flex w-1/5">
+      <a class="block" href="{{ url('/') }}">
         <x-jet-application-mark class="block h-9 w-auto" />
       </a>
     </div>
