@@ -7,7 +7,7 @@ use Illuminate\View\Component;
 class Button extends Component
 {
     private $raw_class = [];
-    
+
     /**
      * Create a new component instance.
      *
@@ -99,11 +99,15 @@ class Button extends Component
 
         $class = 'bg-transparent hover:bg-gray-50 active:bg-gray-100 focus:bg-gray-100 ';
 
-        if ($this->attributes['primary']) {
-            unset($this->attributes['primary']);
-            return $class .= 'border-primary text-primary focus:border-primary-300';
+        switch ($this->attributes['color']) {
+            case 'primary':
+                $class .= 'border-primary text-primary focus:border-primary-300';
+                break;
+            default:
+                $class .= 'border-gray-800 text-gray-800 focus:border-gray-900';
+                break;
         }
 
-        return $class .= 'border-gray-800 text-gray-800 focus:border-gray-900';
+        return $class;
     }
 }

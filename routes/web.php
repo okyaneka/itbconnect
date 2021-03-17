@@ -25,10 +25,22 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/search', function () {
         return view('search');
     })->name('search');
-    
+
     Route::get('/u/{username}', function ($username) {
         return view('user', compact('username'));
     })->name('user');
+
+    Route::get('/news/{slug}', function ($slug) {
+        return view('single.news', compact('slug'));
+    })->name('single.news');
+
+    Route::get('/ayo-beresin/{slug}', function ($slug) {
+        return view('single.feature-1', compact('slug'));
+    })->name('single.feature-1');
+
+    Route::get('/loker-project-beasiswa/{slug}', function ($slug) {
+        return view('single.feature-2', compact('slug'));
+    })->name('single.feature-2');
 
     Route::get('/user/business', function () {
         return view('business');
@@ -42,7 +54,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('feature-1');
     })->name('feature1.show');
 
-    Route::get('/user/loker', function () {
+    Route::get('/user/loker-project-beasiswa', function () {
         return view('feature-2');
     })->name('feature2.show');
 });

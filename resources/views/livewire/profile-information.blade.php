@@ -82,7 +82,7 @@
 				<label class="block w-1/4 mt-2" for="adress">{{ __('Address') }}</label>
 				<textarea
 					class="block w-3/4 resize-none border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-					id="adress" class="block mt-1 w-3/4" type="text" name="adress" rows="3"
+					id="adress" type="text" name="adress" rows="3"
 					required>{{ old('adress') }}</textarea>
 			</div>
 

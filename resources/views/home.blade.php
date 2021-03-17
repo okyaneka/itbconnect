@@ -5,38 +5,50 @@
         <div class="flex flex-nowrap h-full w-full transition-all ease-in-out duration-1000 slide relative left-0">
           <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
             style="background-image: url('{{ url('/images/ITB Connect_Web-alt size.png') }}')">
-            <div class="container mx-auto">
-              <div class="text-3xl">
-                Type your title here
+            <div class="container mx-auto flex">
+              <div class="rounded bg-black bg-opacity-50 p-4">
+                <div class="text-3xl">
+                  Type your title here
+                </div>
+                <div class="text-xl">
+                  Type your subtitle here
+                </div>
+                <div class="mt-4">
+                  <x-button href="#" color="primary">Button</x-button>
+                </div>
               </div>
-              <div class="text-xl">
-                Type your subtitle here
-              </div>
-              <x-button href="#" color="primary">Button</x-button>
             </div>
           </div>
           <div class="w-full h-full bg-red-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
             style="background-image: url('{{ url('/images/ITB Connect2_Web-alt size.png') }}')">
-            <div class="container mx-auto">
-              <div class="text-3xl">
-                Type your title here
+            <div class="container mx-auto flex">
+              <div class="rounded bg-black bg-opacity-50 p-4">
+                <div class="text-3xl">
+                  Type your title here
+                </div>
+                <div class="text-xl">
+                  Type your subtitle here
+                </div>
+                <div class="mt-4">
+                  <x-button href="#" color="primary">Button</x-button>
+                </div>
               </div>
-              <div class="text-xl">
-                Type your subtitle here
-              </div>
-              <x-button href="#" color="primary">Button</x-button>
             </div>
           </div>
           <div class="w-full h-full bg-primary text-white flex flex-none items-center px-16 bg-center bg-cover"
             style="background-image: url('{{ url('/images/ITB Connect3_Web-alt size.png') }}')">
-            <div class="container mx-auto">
-              <div class="text-3xl">
-                Type your title here
+            <div class="container mx-auto flex">
+              <div class="rounded bg-black bg-opacity-50 p-4">
+                <div class="text-3xl">
+                  Type your title here
+                </div>
+                <div class="text-xl">
+                  Type your subtitle here
+                </div>
+                <div class="mt-4">
+                  <x-button href="#" color="primary">Button</x-button>
+                </div>
               </div>
-              <div class="text-xl">
-                Type your subtitle here
-              </div>
-              <x-button href="#" color="primary">Button</x-button>
             </div>
           </div>
         </div>
@@ -81,8 +93,8 @@
       <x-slot name="title">Koneksi Alumni</x-slot>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-        @for ($i = 0; $i < 9; ++$i) 
-        <x-user-card :user="$i" />
+        @for ($i = 0; $i
+        < 9; ++$i) <x-user-card :user="$i" />
         @endfor
       </div>
 
@@ -90,21 +102,24 @@
         <x-button href="#" color="primary" class="ml-auto">Selengkapnya</x-button>
       </div>
     </x-section>
-    
+
     <x-section>
       <x-slot name="title">Kabar Alumni</x-slot>
 
       <div id="news" class="relative mb-4">
         <div class="wrapper h-56">
-          <div class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
-            @for ($i = 0; $i < 3; $i++)
-            <x-article-card :article="'News #'.($i + 1)"></x-article-card>
-            @endfor
+          <div
+            class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
+            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'News #'.($i + 1)" href="{{ route('single.news', 'news-'.$i) }}">
+              </x-article-card>
+              @endfor
           </div>
         </div>
 
-        <x-button-icon class="prev absolute inset-y-1/2 -left-4 transform -translate-y-1/2"><i class="ri-arrow-left-s-fill"></i></x-button-icon>
-        <x-button-icon class="next absolute inset-y-1/2 -right-4 transform -translate-y-1/2"><i class="ri-arrow-right-s-fill"></i></x-button-icon>
+        <x-button-icon class="prev absolute inset-y-1/2 -left-4 transform -translate-y-1/2"><i
+            class="ri-arrow-left-s-fill"></i></x-button-icon>
+        <x-button-icon class="next absolute inset-y-1/2 -right-4 transform -translate-y-1/2"><i
+            class="ri-arrow-right-s-fill"></i></x-button-icon>
       </div>
 
       <div class="flex justify-end">
@@ -117,15 +132,18 @@
 
       <div id="ayoberesinbareng" class="relative mb-4">
         <div class="wrapper h-56">
-          <div class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
-            @for ($i = 0; $i < 3; $i++)
-            <x-article-card :article="'Gerakan #'.($i + 1)"></x-article-card>
-            @endfor
+          <div
+            class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
+            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'Gerakan #'.($i + 1)" href="{{ route('single.feature-1', 'ayo-beresin') }}">
+              </x-article-card>
+              @endfor
           </div>
         </div>
 
-        <x-button-icon class="prev absolute inset-y-1/2 -left-4 transform -translate-y-1/2"><i class="ri-arrow-left-s-fill"></i></x-button-icon>
-        <x-button-icon class="next absolute inset-y-1/2 -right-4 transform -translate-y-1/2"><i class="ri-arrow-right-s-fill"></i></x-button-icon>
+        <x-button-icon class="prev absolute inset-y-1/2 -left-4 transform -translate-y-1/2"><i
+            class="ri-arrow-left-s-fill"></i></x-button-icon>
+        <x-button-icon class="next absolute inset-y-1/2 -right-4 transform -translate-y-1/2"><i
+            class="ri-arrow-right-s-fill"></i></x-button-icon>
       </div>
 
       <div class="flex justify-end">
@@ -138,43 +156,49 @@
 
       <div id="infoloker" class="relative mb-4">
         <div class="wrapper h-40">
-          <div class="content absolute h-full flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
+          <div
+            class="content absolute h-full flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
             {{-- Loker --}}
-            <div class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-rasberry overflow-hidden">
+            <div
+              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-rasberry overflow-hidden">
               <div class="text-3xl text-white">Loker</div>
               <div class="text-white">Caption text here</div>
               <div class="mt-auto">
-                <x-button href="#" color="white">Read more</x-button>
+                <x-button href="{{ route('single.feature-2', 'loker') }}" color="white">Read more</x-button>
               </div>
             </div>
             {{-- Project --}}
-            <div class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-yellow overflow-hidden">
-              <div class="text-3xl text-white">Loker</div>
+            <div
+              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-yellow overflow-hidden">
+              <div class="text-3xl text-white">Project</div>
               <div class="text-white">Caption text here</div>
               <div class="mt-auto">
-                <x-button href="#" color="white">Read more</x-button>
+                <x-button href="{{ route('single.feature-2', 'project') }}" color="white">Read more</x-button>
               </div>
             </div>
-            {{-- Beasisawa --}}
-            <div class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-primary overflow-hidden">
-              <div class="text-3xl text-white">Loker</div>
+            {{-- Beasiswa --}}
+            <div
+              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-primary overflow-hidden">
+              <div class="text-3xl text-white">Beasiswa</div>
               <div class="text-white">Caption text here</div>
               <div class="mt-auto">
-                <x-button href="#" color="white">Read more</x-button>
+                <x-button href="{{ route('single.feature-2', 'beasiswa') }}" color="white">Read more</x-button>
               </div>
             </div>
           </div>
         </div>
 
-        <x-button-icon class="prev absolute inset-y-1/2 -left-4 transform -translate-y-1/2"><i class="ri-arrow-left-s-fill"></i></x-button-icon>
-        <x-button-icon class="next absolute inset-y-1/2 -right-4 transform -translate-y-1/2"><i class="ri-arrow-right-s-fill"></i></x-button-icon>
+        <x-button-icon class="prev absolute inset-y-1/2 -left-4 transform -translate-y-1/2"><i
+            class="ri-arrow-left-s-fill"></i></x-button-icon>
+        <x-button-icon class="next absolute inset-y-1/2 -right-4 transform -translate-y-1/2"><i
+            class="ri-arrow-right-s-fill"></i></x-button-icon>
       </div>
 
       <div class="flex justify-end">
         <x-button href="#" color="primary" class="ml-auto">Selengkapnya</x-button>
       </div>
     </x-section>
-    
+
     <script>
       window.addEventListener('load', function () {
         function slider(id) {

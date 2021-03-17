@@ -7,13 +7,15 @@ use Illuminate\View\Component;
 class ArticleCard extends Component
 {
     public $article;
+    public $href;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($article)
+    public function __construct($article, $href)
     {
+        $this->href = $href;
         $this->article = $article;
     }
 
