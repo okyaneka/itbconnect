@@ -10,11 +10,12 @@
     <div class="container p-4 flex items-center">
       <div
         class="rounded-full mr-4 relative -top-16 flex-none md:h-32 md:w-32 h-20 w-20 bg-primary bg-center bg-cover border-4 border-primary"
-        style="background-image: url(/images/slide-3.jpg)"></div>
+        style="background-image: url('{{ url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg') }}')">
+      </div>
       <div class="mr-auto space-y-2">
-        <div class="text-xl font-bold">{{ $username }}</div>
-        <div>{{ $company ?? 'CEO PT Maju Makmur' }}</div>
-        <div>{{ $a ?? 'Angkatan - Jurusan' }}</div>
+        <div class="text-xl font-bold">{{ $username ?? 'Roland Andira Wala' }}</div>
+        <div>{{ $company ?? 'Commissioner at PT. SAS Andalan Sinergi' }}</div>
+        <div>{{ $a ?? '2005 - Teknik Mesin' }}</div>
       </div>
       <div class="flex space-x-4">
         <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-20 w-20"
@@ -38,18 +39,18 @@
   </div>
 
   <div class="container my-8 px-4 space-y-8">
-    <div x-data="{ active: 5 }">
+    <div x-data="{ active: 1 }">
       <div class="flex gap-2">
         <div @click="active = 1" :class="{ 'bg-white': active == 1, 'bg-gray-200': active != 1 }"
-          class="uppercase cursor-pointer py-2 px-4">Profil</div>
+          class="uppercase flex items-center text-center cursor-pointer py-2 px-4">Profil</div>
         <div @click="active = 2" :class="{ 'bg-white': active == 2, 'bg-gray-200': active != 2 }"
-          class="uppercase cursor-pointer py-2 px-4">Pengalaman</div>
+          class="uppercase flex items-center text-center cursor-pointer py-2 px-4">Pengalaman</div>
         <div @click="active = 3" :class="{ 'bg-white': active == 3, 'bg-gray-200': active != 3 }"
-          class="uppercase cursor-pointer py-2 px-4">Pendidikan</div>
+          class="uppercase flex items-center text-center cursor-pointer py-2 px-4">Pendidikan</div>
         <div @click="active = 4" :class="{ 'bg-white': active == 4, 'bg-gray-200': active != 4 }"
-          class="uppercase cursor-pointer py-2 px-4">Minat & Organisasi</div>
+          class="uppercase flex items-center text-center cursor-pointer py-2 px-4">Minat & Organisasi</div>
         <div @click="active = 5" :class="{ 'bg-white': active == 5, 'bg-gray-200': active != 5 }"
-          class="uppercase cursor-pointer py-2 px-4">Bisnis & Profesi</div>
+          class="uppercase flex items-center text-center cursor-pointer py-2 px-4">Bisnis & Profesi</div>
       </div>
 
       <div class="bg-white py-8 px-4">
@@ -57,24 +58,28 @@
           <table class="ml-8">
             <tbody>
               <tr>
-                <td class="font-bold text-right ">Nama</td>
-                <td class="px-2">:</td>
-                <td>John Doe</td>
+                <td class="align-top font-bold text-right ">Nama</td>
+                <td class="align-top px-2">:</td>
+                <td class="align-top">Roland Andira Wala</td>
               </tr>
               <tr>
-                <td class="font-bold text-right">Alamat</td>
-                <td class="px-2">:</td>
-                <td>John Doe Streets</td>
+                <td class="align-top font-bold text-right">Alamat</td>
+                <td class="align-top px-2">:</td>
+                <td class="align-top">Raffles Hills E3/2</td>
               </tr>
               <tr>
-                <td class="font-bold text-right">Email</td>
-                <td class="px-2">:</td>
-                <td>johndoe@gmail.com</td>
+                <td class="align-top font-bold text-right">Email</td>
+                <td class="align-top px-2">:</td>
+                <td class="align-top">
+                  roland.wala@gmail.com <br>
+                  roland.wala@sas-aero.id<br>
+                  wala.roland@saftaferti.com
+                </td>
               </tr>
               <tr>
-                <td class="font-bold text-right">No. Telepon</td>
-                <td class="px-2">:</td>
-                <td>+123</td>
+                <td class="align-top font-bold text-right">No. Telepon</td>
+                <td class="align-top px-2">:</td>
+                <td class="align-top">0811228545</td>
               </tr>
             </tbody>
           </table>
@@ -82,116 +87,115 @@
 
         <div x-show="active == 2">
           <div class="flex flex-col space-y-4">
-            @for ($i = 0; $i < 3; $i++) <div class="rounded shadow p-4">
-              <div class="font-bold">Chied Executive Officer</div>
-              <div>PT Maju Makmur</div>
-              <div>2017 - Sekarang</div>
-              <div>Jakarta</div>
-          </div>
-          @endfor
-        </div>
-      </div>
-
-      <div x-show="active == 3">
-        <div class="flex flex-col space-y-4">
-          <div class="rounded shadow p-4">
-            <div class="font-bold">Institute Teknologi Bandung</div>
-            <div>S2 - Teknik Sipil</div>
-            <div>2016 - 2018</div>
-          </div>
-          <div class="rounded shadow p-4">
-            <div class="font-bold">Institute Teknologi Bandung</div>
-            <div>S1 - Teknik Sipil</div>
-            <div>2012 - 2016</div>
+            @foreach ($experiences as $exp)
+            <div class="rounded shadow p-4">
+              <div class="font-bold">{{ $exp->profession }}</div>
+              <div>{{ $exp->company }}</div>
+              <div>{{ $exp->start_year . (empty($exp->end_year) ? '' : ' - '.$exp->end_year) }}</div>
+            </div>
+            @endforeach
           </div>
         </div>
-      </div>
 
-      <div x-show="active == 4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="flex space-x-4 items-center text-lg">
-            <div class="h-24 w-24 bg-center bg-cover" style="background-image: url(/images/slide-3.jpg);"></div>
-            <div class="font-bold">Unit Basket Ganesha</div>
-          </div>
-          <div class="flex space-x-4 items-center text-lg">
-            <div class="h-24 w-24 bg-center bg-cover" style="background-image: url(/images/slide-3.jpg);"></div>
-            <div class="font-bold">Lingkar Sastra (LS)</div>
-          </div>
-          <div class="flex space-x-4 items-center text-lg">
-            <div class="h-24 w-24 bg-center bg-cover" style="background-image: url(/images/slide-3.jpg);"></div>
-            <div class="font-bold">ITB Jazz</div>
-          </div>
-          <div class="flex space-x-4 items-center text-lg">
-            <div class="h-24 w-24 bg-center bg-cover" style="background-image: url(/images/slide-3.jpg);"></div>
-            <div class="font-bold">ITB Student Orchestra (ISO)</div>
+        <div x-show="active == 3">
+          <div class="flex flex-col space-y-4">
+            @foreach ($educations as $ed)
+            <div class="rounded shadow p-4">
+              <div class="font-bold">{{ $ed->school }}</div>
+              @if (!empty($ed->grade.$ed->major))
+              <div>
+                {{ (empty($ed->grade) ? '' : $ed->grade) . (empty($ed->major) ? '' : empty($ed->grade) ? $ed->major : ' - '.$ed->major) }}
+              </div>
+              @endif
+              <div>{{ $ed->entry_year }} - {{ $ed->grad_year }}</div>
+            </div>
+            @endforeach
           </div>
         </div>
-      </div>
 
-      <div x-show="active == 5">
-        <div x-data="{a: 0}">
-          <div class="flex space-x-4 mb-4">
-            @for ($i = 0; $i < 3; $i++)
-            <div class="flex flex-col cursor-pointer" @click="a = {{ $i }}" :class="a == {{ $i }} ? '' : 'opacity-50'">
-              <div class="text-lg uppercase">PT MAJU MAKMUR {{ $i + 1 }}</div>
-              <div class="w-full py-1 bg-primary"></div>
+        <div x-show="active == 4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="flex space-x-4 space-y-4 items-center text-lg">
+              <div class="h-24 w-24 bg-center bg-cover" style="background-image: url(/images/HMM-ITB.png);"></div>
+              <div class="font-bold">HMM ITB</div>
+            </div>
+          </div>
+        </div>
+
+        <div x-show="active == 5">
+          <div x-data="{a: 0}">
+            <div class="flex space-x-4 mb-4">
+              @for ($i = 0; $i < 1; $i++) <div class="flex flex-col cursor-pointer" @click="a = {{ $i }}"
+                :class="a == {{ $i }} ? '' : 'opacity-50'">
+                <div class="text-lg uppercase">PT. SAS AERO SISHAN</div>
+                <div class="w-full py-1 bg-primary"></div>
             </div>
             @endfor
           </div>
-  
-          @for ($j = 0; $j < 3; $j++)
-          <div x-show="a == {{ $j }}" class="flex flex-col space-y-8">
+
+          @for ($j = 0; $j < 1; $j++) <div x-show="a == {{ $j }}" class="flex flex-col space-y-8">
             <img class="object-cover h-96 w-full block" src="{{ asset('/images/slide-'.($j + 1).'.jpg') }}" alt="">
-  
+
             <div>
               <div class="uppercase font-bold">{{ __('Field of business') }}</div>
               <div class="py-1 bg-primary opacity-50 my-2"></div>
-              <div class="flex flex-wrap -m-2">
-                @for ($i = 0; $i < 3; $i++)
-                  <x-button class="m-2" type="button" color="primary">Bisnis {{ $i + 1 }}</x-button>
-                @endfor
+              <div class="flex flex-wrap space-x-4 space-y-4">
+                <div
+                  class="transition duration-300 cursor-default text-indigo-500 background-transparent hover:text-white hover:bg-indigo-500 hover:border-none font-bold uppercase px-3 py-1 border border-current justify-center items-center flex focus:border">
+                  <div class="mt-1">Teknologi Pertahanan</div>
+                </div>
               </div>
             </div>
-            
+
             <div>
               <div class="uppercase font-bold">{{ __('Business information') }}</div>
               <div class="py-1 bg-primary opacity-50 my-2"></div>
-              <div class="whitespace-pre-line mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam vel dolor id tristique. Sed et nulla tortor. Mauris a neque dui. Sed diam ligula, placerat in nunc quis, accumsan accumsan metus. Mauris non faucibus metus. Sed congue massa in orci ultricies, et porttitor odio bibendum. Etiam commodo leo sit amet placerat volutpat. Vivamus sodales cursus rutrum. Sed pulvinar at leo ac fringilla. Duis eget odio efficitur, convallis nunc at, porta mi. Vivamus maximus vulputate leo nec consequat. Pellentesque tincidunt eget magna id aliquet. Integer tristique ullamcorper tempus.
-  
-                Duis auctor nisl mi, ac venenatis magna lacinia sed. Nulla nulla mauris, facilisis vitae felis quis, malesuada ornare leo. Curabitur at porta augue. Cras egestas sed libero ac dictum. Sed dapibus nunc ac leo molestie consequat. Sed mattis, ante at commodo ullamcorper, urna nunc pulvinar metus, sit amet sagittis nisi metus at nibh. Morbi mauris risus, pretium blandit eleifend at, pellentesque a est. Vivamus nec justo id ipsum finibus finibus. Fusce nec malesuada nibh, eu interdum sapien.
-                
-                Ut sed diam lacus. Aenean ultricies, elit eu faucibus hendrerit, arcu mauris luctus tortor, at placerat dolor tortor non risus. Nulla id erat at felis ullamcorper accumsan. Pellentesque arcu augue, dignissim vitae neque a, malesuada lobortis velit. Aliquam erat volutpat. Pellentesque cursus ornare auctor. Fusce dignissim nibh non metus varius, quis fermentum ligula rutrum. Aenean blandit vitae lorem vitae pharetra. Aliquam ultricies ex in posuere fringilla. Aliquam luctus odio congue sapien tempus varius.
+              <div class="mt-2 space-y-2">
+                <p class="font-bold">About us</p>
+                <p>
+                  PT. SAS Aero Sishan (SAS) is a company developing defense systems and technologies. SAS combines
+                  expertise from founders’ expertise, previous experience, and newly recruited aerospace experts to
+                  tackle challenges in Indonesian aerospace & defense industry. SAS’s roots dates back to 2011 when
+                  our founders built business and technical foundations in process and manufacturing industry</p>
+                <p class="font-bold">Vision</p>
+                <p>
+                  To be a leading, reputable manufacturer and prime contractor of advanced weapons, systems, and
+                  platforms program for military and coast guard in South East Asia
+                </p>
+                <p class="font-bold">Mission</p>
+                <p>To develop, manufacture, and supply advanced weapons, systems, and platforms.</p>
               </div>
             </div>
-  
+
             <div>
               <div class="uppercase font-bold">{{ __('Produk / Layanan') }}</div>
               <div class="py-1 bg-primary opacity-50 my-2"></div>
-              <div class="flex -m-2 flex-wrap">
-                @for ($i = 0; $i < 3; $i++)
-                <div class="w-48 h-36 m-2 flex flex-col items-center space-y-2">
-                  <img class="object-cover h-full w-full block" src="{{ asset('/images/slide-'.($i + 1).'.jpg') }}" alt="">
-                  <div>Nama Produk / Layanan</div>
+              <div class="flex space-x-4 space-y-4 flex-wrap">
+                @foreach ($products as $product)
+                <div class="flex flex-col w-48 items-center space-y-2">
+                  <img class="object-cover w-full h-36 block" src="{{ url('/images/'.$product->img_src) }}" alt="">
+                  <div>{{ $product->name }}</div>
                 </div>
-                @endfor
+                @endforeach
               </div>
             </div>
-            
+
             <div>
               <div class="uppercase font-bold">{{ __('Portofolio') }}</div>
               <div class="py-1 bg-primary opacity-50 my-2"></div>
-              <div class="flex -m-2 flex-wrap">
-                @for ($i = 0; $i < 8; $i++)
-                <div class="w-48 h-36 m-2 flex flex-col items-center space-y-2">
-                  <img class="object-cover h-full w-full block" src="{{ asset('/images/slide-'.($i % 3 + 1).'.jpg') }}" alt="">
+              <div class="flex space-x-4 space-y-4 flex-wrap">
+                @foreach ($portofolios as $img_src)
+                <div class="w-48 h-36 flex flex-col items-center space-y-2">
+                  <img class="object-cover h-full w-full block" src="{{ asset('/images/'.$img_src) }}"
+                    alt="">
                 </div>
-                @endfor
+                @endforeach
               </div>
             </div>
-          </div>
-          @endfor
         </div>
+        @endfor
       </div>
     </div>
+  </div>
   </div>
 </x-app-layout>
