@@ -147,7 +147,7 @@
 		<div class="flex flex-col space-y-4">
 			<div class="font-bold capitalize">{{ __('Experience') }}</div>
 
-			<table class="table-auto border-collapse">
+			<table class="w-full border-collapse">
 				<thead>
 					<tr>
 						<th class="border p-2 w-2 whitespace-nowrap">No</th>
@@ -216,7 +216,7 @@
 		<div class="flex flex-col space-y-4">
 			<div class="font-bold capitalize">{{ __('Education') }}</div>
 
-			<table class="table-auto border-collapse">
+			<table class="w-full border-collapse">
 				<thead>
 					<tr>
 						<th class="border p-2 w-2 whitespace-nowrap">No</th>
@@ -287,7 +287,7 @@
 		<div class="flex flex-col space-y-4">
 			<div class="font-bold capitalize">{{ __('interests and organization') }}</div>
 
-			<table class="table-auto border-collapse">
+			<table class="w-full border-collapse">
 				<thead>
 					<tr>
 						<th class="border p-2 w-2 whitespace-nowrap">No</th>
