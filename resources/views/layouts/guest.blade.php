@@ -19,10 +19,13 @@
 <body class="font-sans text-gray-800 antialiased">
   {{ $slot }}
 
-  <div class="container mx-8 mt-auto mb-8">
-    <div class="text-lg text-uppercase text-white">
-      {{ env('APP_SHORT_NAME', 'APP_NAME') }} @ 2021 by <img class="h-12 inline-block align-middle"
-        src="/images/logo.png" alt="">
+
+  <div class="container mt-auto mb-8">
+    <div class="mx-8">
+      <div class="text-lg text-uppercase text-white">
+        {{ env('APP_SHORT_NAME', 'APP_NAME') }} @ 2021 by <img class="h-12 inline-block align-middle"
+          src="/images/logo.png" alt="">
+      </div>
     </div>
   </div>
 </body>

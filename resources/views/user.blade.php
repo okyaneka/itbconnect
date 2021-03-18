@@ -7,30 +7,32 @@
   </div>
 
   <div class="w-full flex justify-center bg-white shadow-md">
-    <div class="container p-4 flex items-center">
+    <div class="container p-4 flex items-center flex-wrap">
       <div
         class="rounded-full mr-4 relative -top-16 flex-none md:h-32 md:w-32 h-20 w-20 bg-primary bg-center bg-cover border-4 border-primary"
         style="background-image: url('{{ url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg') }}')">
       </div>
+
       <div class="mr-auto space-y-2">
         <div class="text-xl font-bold">{{ $username ?? 'Roland Andira Wala' }}</div>
         <div>{{ $company ?? 'Commissioner at PT. SAS Andalan Sinergi' }}</div>
         <div>{{ $a ?? '2005 - Teknik Mesin' }}</div>
       </div>
-      <div class="flex space-x-4">
-        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-20 w-20"
+
+      <div class="flex md:space-x-4 space-x-2">
+        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-12 w-12"
           style="background-color: #1877f2">
           <div class="ri-facebook-fill"></div>
         </a>
-        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-20 w-20"
+        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-12 w-12"
           style="background-color: #c32aa3">
           <div class="ri-instagram-fill"></div>
         </a>
-        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-20 w-20"
+        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-12 w-12"
           style="background-color: #1da1f2">
           <div class="ri-twitter-fill"></div>
         </a>
-        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-20 w-20"
+        <a href="#" class="rounded-full text-white text-3xl flex items-center justify-center md:h-16 md:w-16 h-12 w-12"
           style="background-color: #0a66c2">
           <div class="ri-linkedin-fill"></div>
         </a>
@@ -40,7 +42,7 @@
 
   <div class="container my-8 px-4 space-y-8">
     <div x-data="{ active: 1 }">
-      <div class="flex gap-2">
+      <div class="flex gap-2 overflow-auto">
         <div @click="active = 1" :class="{ 'bg-white': active == 1, 'bg-gray-200': active != 1 }"
           class="uppercase flex items-center text-center cursor-pointer py-2 px-4">Profil</div>
         <div @click="active = 2" :class="{ 'bg-white': active == 2, 'bg-gray-200': active != 2 }"
@@ -170,9 +172,9 @@
             <div>
               <div class="uppercase font-bold">{{ __('Produk / Layanan') }}</div>
               <div class="py-1 bg-primary opacity-50 my-2"></div>
-              <div class="flex space-x-4 space-y-4 flex-wrap">
+              <div class="flex flex-wrap -ml-2">
                 @foreach ($products as $product)
-                <div class="flex flex-col w-48 items-center space-y-2">
+                <div class="flex flex-col w-48 items-center space-y-2 m-2">
                   <img class="object-cover w-full h-36 block" src="{{ url('/images/'.$product->img_src) }}" alt="">
                   <div>{{ $product->name }}</div>
                 </div>
@@ -183,9 +185,9 @@
             <div>
               <div class="uppercase font-bold">{{ __('Portofolio') }}</div>
               <div class="py-1 bg-primary opacity-50 my-2"></div>
-              <div class="flex space-x-4 space-y-4 flex-wrap">
+              <div class="flex flex-wrap -ml-2">
                 @foreach ($portofolios as $img_src)
-                <div class="w-48 h-36 flex flex-col items-center space-y-2">
+                <div class="w-48 h-36 flex flex-col items-center space-y-2 m-2">
                   <img class="object-cover h-full w-full block" src="{{ asset('/images/'.$img_src) }}" alt="">
                 </div>
                 @endforeach

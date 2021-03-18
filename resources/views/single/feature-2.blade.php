@@ -5,7 +5,7 @@
         style="background-image: url(/images/slide-1.jpg)">
         <div class="w-full h-full flex items-center justify-center flex-col bg-black bg-opacity-40">
           <div class="container flex flex-col">
-            <div class="md:w-3/4 w-full mx-auto">
+            <div class="md:w-3/4 w-full p-4 mx-auto">
               <div class="text-5xl">
                 Your article title here
               </div>
@@ -22,29 +22,29 @@
   <div class="container my-8 px-4 space-y-4">
     <div class="md:w-3/4 w-full mx-auto space-y-8">
 
-      <div class="text-gray-400 flex space-x-4">
+      <div class="text-gray-400 flex space-x-4 flex-wrap">
         <div class="space-x-2 flex">
           <div class="ri-calendar-line"></div>
-          <div>September 25, 2020</div>
+          <div class="whitespace-nowrap">September 25, 2020</div>
         </div>
 
         <div class="space-x-2 flex">
           <div class="ri-question-answer-line"></div>
-          <div>Add comment</div>
+          <div class="whitespace-nowrap">Add comment</div>
         </div>
 
         <div class="space-x-2 flex">
           <div class="ri-eye-line"></div>
-          <div>1.245 views</div>
+          <div class="whitespace-nowrap">1.245 views</div>
         </div>
 
         <div class="space-x-2 flex">
           <div class="ri-time-line"></div>
-          <div>1 min read</div>
+          <div class="whitespace-nowrap">1 min read</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <a href="#"
           class="transition duration-300  text-indigo-500 background-transparent hover:text-white hover:bg-indigo-500 hover:border-none font-bold uppercase px-3 py-1 border border-current justify-center items-center flex focus:border"><i
             class="ri-facebook-fill mr-2"></i>

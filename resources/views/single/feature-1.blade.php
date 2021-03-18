@@ -6,20 +6,18 @@
           <img src="{{ url('images/Sketch_Ai-03.png') }}" alt="" srcset="">
         </div>
 
-        <div class="flex flex-col space-y-4 p-4">
+        <div class="flex flex-col space-y-4">
           <div class="text-2xl">
             Your article title here
           </div>
 
-          <div class="flex">
-            <div class="border border-primary bg-white rounded py-4 px-6 flex space-x-4">
-              <div class="rounded-full flex-none h-20 w-20 bg-center bg-cover"
-                style="background-image: url(/images/slide-1.jpg)"></div>
-              <div class="flex flex-col">
-                <div class="font-bold text-lg">Your name here</div>
-                <div class="text-primary">Your company here</div>
-                <div class="text-gray-500">Angkatan - jurusan</div>
-              </div>
+          <div class="border border-primary bg-white rounded py-4 px-6 flex space-x-4">
+            <div class="rounded-full flex-none h-20 w-20 bg-center bg-cover"
+              style="background-image: url(/images/slide-1.jpg)"></div>
+            <div class="flex flex-col">
+              <div class="font-bold text-lg">Your name here</div>
+              <div class="text-primary">Your company here</div>
+              <div class="text-gray-500">Angkatan - jurusan</div>
             </div>
           </div>
 
@@ -35,7 +33,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <a href="#"
           class="transition duration-300  text-indigo-500 background-transparent hover:text-white hover:bg-indigo-500 hover:border-none font-bold uppercase px-3 py-1 border border-current justify-center items-center flex focus:border"><i
             class="ri-facebook-fill mr-2"></i>
