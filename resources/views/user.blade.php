@@ -104,7 +104,7 @@
               <div class="font-bold">{{ $ed->school }}</div>
               @if (!empty($ed->grade.$ed->major))
               <div>
-                {{ (empty($ed->grade) ? '' : $ed->grade) . (empty($ed->major) ? '' : empty($ed->grade) ? $ed->major : ' - '.$ed->major) }}
+                {{ (empty($ed->grade) ? '' : $ed->grade) . (!empty($ed->major) ? (empty($ed->grade) ? $ed->major : ' - '.$ed->major):  '' ) }}
               </div>
               @endif
               <div>{{ $ed->entry_year }} - {{ $ed->grad_year }}</div>
@@ -186,8 +186,7 @@
               <div class="flex space-x-4 space-y-4 flex-wrap">
                 @foreach ($portofolios as $img_src)
                 <div class="w-48 h-36 flex flex-col items-center space-y-2">
-                  <img class="object-cover h-full w-full block" src="{{ asset('/images/'.$img_src) }}"
-                    alt="">
+                  <img class="object-cover h-full w-full block" src="{{ asset('/images/'.$img_src) }}" alt="">
                 </div>
                 @endforeach
               </div>
