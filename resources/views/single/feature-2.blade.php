@@ -93,7 +93,7 @@
       </div>
 
       <div class="lg:w-1/2 w-full">
-        <x-user-card user="user"></x-user-card>
+        <x-user-card :user="$user"></x-user-card>
       </div>
       <x-jet-section-border />
 

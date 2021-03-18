@@ -215,7 +215,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('single.feature-1');
 
     Route::get('/loker-project-beasiswa/{slug}', function ($slug) {
-        return view('single.feature-2', compact('slug'));
+        $user = (object) [
+            'name' => 'Roland Andira Wala',
+            'profession' => 'Commissioner',
+            'company' => 'PT SAS Andalan Sinergi',
+            'entry_year' => '2005',
+            'major' => 'Teknik Mesin',
+            'profile_photo_url' => url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg'),
+        ];
+
+        return view('single.feature-2', compact('user'));
     })->name('single.feature-2');
 
     Route::get('/user/business', function () {
