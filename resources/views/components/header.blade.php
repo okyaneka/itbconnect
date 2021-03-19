@@ -6,7 +6,7 @@
       </a>
     </div>
     @csrf
-    <form class="block flex mx-4 w-3/5" action="{{ route('search') }}" method="GET">
+    <form class="block flex sm:mx-4 w-3/5" action="{{ route('search') }}" method="GET">
       <div class="relative rounded-md w-full mr-2 text-gray-800">
         <div id="showFilter" class="absolute inset-y-0 left-0 flex items-center">
           <x-button color="transparent" type="button" class="h-full" icon><i class="ri-menu-line"></i></x-button>
@@ -21,7 +21,7 @@
         </div>
 
         <div id="filter" class="hidden absolute top-12 w-full p-4 shadow-md rounded-md bg-gray-100 z-10">
-          <div class="grid grid-cols-3 gap-4 mb-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
             <div>
               <x-jet-label for="major" value="{{ __('Major') }}" />
               <x-select class="block mt-1 w-full" name="major" id="major">
@@ -41,9 +41,9 @@
               </x-select>
             </div>
           </div>
-          <div class="flex justify-end space-x-4">
-            <x-button class="hideFilter" color="white" type="button">Batal</x-button>
-            <x-button color="primary">Terapkan</x-button>
+          <div class="flex -m-2 flex-row-reverse flex-wrap">
+            <x-button class="m-2" color="primary">Terapkan</x-button>
+            <x-button class="hideFilter m-2" color="white" type="button">Batal</x-button>
           </div>
         </div>
       </div>
@@ -66,25 +66,27 @@
       </script>
     </form>
 
-    <div class="text-lg flex justify-end w-1/5 items-center">
-      <x-button color="transparent-dark" class="h-full" icon><i class="text-xl ri-question-answer-line"></i></x-button>
+    <div class="text-lg flex justify-end sm:w-1/5 items-center">
+      <x-button color="transparent-dark" class="h-full hidden sm:block" icon><i class="text-xl ri-question-answer-line"></i></x-button>
       <x-jet-dropdown align="right" width="48">
         <x-slot name="trigger">
-          @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-          <x-button color="transparent-dark" class="h-full" icon>
-            @if (Auth::user()->profile_photo_url)
-            <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
-              alt="{{ Auth::user()->name }}" />
+          <div class="flex items-center">
+            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+            <x-button color="transparent-dark" icon>
+              @if (Auth::user()->profile_photo_url)
+              <img class="h-full w-full rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
+                alt="{{ Auth::user()->name }}" />
+              @else
+              <i class="ri-user-fill"></i>
+              @endif
+            </x-button>
             @else
-            <i class="ri-user-fill"></i>
+            <x-button color="transparent-dark" class="h-full" icon>
+              <i class="ri-user-fill"></i>
+              <i class="ri-arrow-drop-down-fill"></i>
+            </x-button>
             @endif
-          </x-button>
-          @else
-          <x-button color="transparent-dark" class="h-full" icon>
-            <i class="ri-user-fill"></i>
-            <i class="ri-arrow-drop-down-fill"></i>
-          </x-button>
-          @endif
+          </div>
         </x-slot>
 
         <x-slot name="content">
@@ -95,6 +97,10 @@
 
           <x-jet-dropdown-link href="{{ route('profile.show') }}">
             {{ __('Profile') }}
+          </x-jet-dropdown-link>
+
+          <x-jet-dropdown-link class="sm:hidden block" href="#">
+            {{ __('Message') }}
           </x-jet-dropdown-link>
 
           @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
