@@ -21,21 +21,21 @@
         <div class="bg-primary p-4 rounded-lg flex items-center">
           <i class="ri-medal-fill text-6xl block"></i>
           <div class="text-right ml-auto">
-            <div class="text-4xl font-bold">53</div>
+            <div class="text-4xl font-bold">6</div>
             <div class="text-xl">Total ditemukan</div>
           </div>
         </div>
         <div class="bg-primary p-4 rounded-lg flex items-center">
           <i class="ri-star-fill text-6xl block"></i>
           <div class="text-right ml-auto">
-            <div class="text-4xl font-bold">14</div>
+            <div class="text-4xl font-bold">4</div>
             <div class="text-xl">Total seangkatan</div>
           </div>
         </div>
         <div class="bg-primary p-4 rounded-lg flex items-center">
           <i class="ri-government-fill text-6xl block"></i>
           <div class="text-right ml-auto">
-            <div class="text-4xl font-bold">23</div>
+            <div class="text-4xl font-bold">6</div>
             <div class="text-xl">Total sejurusan</div>
           </div>
         </div>
@@ -47,9 +47,9 @@
       <x-slot name="title">Koneksi Alumni</x-slot>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-        @for ($i = 0; $i
-        < 12; ++$i) <x-user-card :user="$i" />
-        @endfor
+        @foreach ($users as $user)
+        <x-user-card :user="$user" />
+        @endforeach
       </div>
 
       <div class="flex justify-end gap-2">

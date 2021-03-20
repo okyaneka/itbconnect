@@ -1,6 +1,6 @@
 <x-app-layout>
   <div id="slider-1" class="w-full h-96">
-    <div class="relative flex h-full">
+    <div x-data="{popup: false, active: 1}" class="relative flex h-full">
       <div class="absolute w-full h-full overflow-hidden">
         <div class="flex flex-nowrap h-full w-full transition-all ease-in-out duration-1000 slide relative left-0">
           <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
@@ -8,13 +8,15 @@
             <div class="container mx-auto flex">
               <div class="rounded bg-black bg-opacity-50 p-4">
                 <div class="text-3xl">
-                  Type your title here
+                  Undang teman
                 </div>
                 <div class="text-xl">
-                  Type your subtitle here
+                  Undang teman untuk bergabung dengan itbconnect.org
                 </div>
                 <div class="mt-4">
-                  <x-button href="#" color="primary">Button</x-button>
+                  <div @click="popup = true">
+                    <x-button href="#" color="primary">Undang Teman</x-button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -24,13 +26,15 @@
             <div class="container mx-auto flex">
               <div class="rounded bg-black bg-opacity-50 p-4">
                 <div class="text-3xl">
-                  Type your title here
+                  Undang teman
                 </div>
                 <div class="text-xl">
-                  Type your subtitle here
+                  Undang teman untuk bergabung dengan itbconnect.org
                 </div>
                 <div class="mt-4">
-                  <x-button href="#" color="primary">Button</x-button>
+                  <div @click="popup = true">
+                    <x-button href="#" color="primary">Undang Teman</x-button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -40,13 +44,15 @@
             <div class="container mx-auto flex">
               <div class="rounded bg-black bg-opacity-50 p-4">
                 <div class="text-3xl">
-                  Type your title here
+                  Undang teman
                 </div>
                 <div class="text-xl">
-                  Type your subtitle here
+                  Undang teman untuk bergabung dengan itbconnect.org
                 </div>
                 <div class="mt-4">
-                  <x-button href="#" color="primary">Button</x-button>
+                  <div @click="popup = true">
+                    <x-button href="#" color="primary">Undang Teman</x-button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,6 +65,26 @@
       <x-button-icon class="next absolute inset-y-1/2 right-4 transform -translate-y-1/2"><i
           class="ri-arrow-right-s-fill"></i>
       </x-button-icon>
+
+      <div x-show="popup" x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95"
+        class="fixed h-screen w-screen bg-primary top-0 left-0 bg-opacity-50 flex items-center justify-center">
+        <div class="w-96 p-4 bg-white border rounded" @click.away="popup = false" @close.stop="popup = false">
+          <div>
+            <x-jet-label for="email" value="{{ __('Masukkan alamat email teman') }}" />
+            <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+              autofocus placeholder="Email" />
+          </div>
+
+          <div class="mt-4">
+            <div @click="popup = false">
+              <x-button href="#" color="primary">Undang Teman</x-button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       window.addEventListener('load', (event) => {
@@ -110,7 +136,8 @@
         <div class="wrapper h-56">
           <div
             class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
-            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'News #'.($i + 1)" href="{{ route('single.news', 'news-'.$i) }}">
+            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'News #'.($i + 1)"
+              href="{{ route('single.news', 'news-'.$i) }}">
               </x-article-card>
               @endfor
           </div>
@@ -134,7 +161,8 @@
         <div class="wrapper h-56">
           <div
             class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
-            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'Gerakan #'.($i + 1)" href="{{ route('single.feature-1', 'ayo-beresin') }}">
+            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'Gerakan #'.($i + 1)"
+              href="{{ route('single.feature-1', 'ayo-beresin') }}">
               </x-article-card>
               @endfor
           </div>
@@ -160,29 +188,47 @@
             class="content absolute h-full flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
             {{-- Loker --}}
             <div
-              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-rasberry overflow-hidden">
-              <div class="text-3xl text-white">Loker</div>
-              <div class="text-white">Caption text here</div>
+              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md bg-cover bg-center hover:shadow-lg overflow-hidden"
+              style="background-image: url(/images/slide-1.jpg)">
+              <div class="text-3xl text-white mb-2">
+                <span class="p-1 pt-2 bg-black bg-opacity-50">Loker</span></div>
+              <div class="text-white">
+                <span class="p-1 pt-2 bg-black bg-opacity-50">
+                  Caption text here
+                </span>
+              </div>
               <div class="mt-auto">
-                <x-button href="{{ route('single.feature-2', 'loker') }}" color="white">Read more</x-button>
+                <x-button href="{{ route('single.feature-2', 'loker') }}" color="primary">Read more</x-button>
               </div>
             </div>
             {{-- Project --}}
             <div
-              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-yellow overflow-hidden">
-              <div class="text-3xl text-white">Project</div>
-              <div class="text-white">Caption text here</div>
+              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md bg-cover bg-center hover:shadow-lg overflow-hidden"
+              style="background-image: url(/images/slide-1.jpg)">
+              <div class="text-3xl text-white mb-2">
+                <span class="p-1 pt-2 bg-black bg-opacity-50">Project</span></div>
+              <div class="text-white">
+                <span class="p-1 pt-2 bg-black bg-opacity-50">
+                  Caption text here
+                </span>
+              </div>
               <div class="mt-auto">
-                <x-button href="{{ route('single.feature-2', 'project') }}" color="white">Read more</x-button>
+                <x-button href="{{ route('single.feature-2', 'project') }}" color="primary">Read more</x-button>
               </div>
             </div>
             {{-- Beasiswa --}}
             <div
-              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md hover:shadow-lg bg-primary overflow-hidden">
-              <div class="text-3xl text-white">Beasiswa</div>
-              <div class="text-white">Caption text here</div>
+              class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md bg-cover bg-center hover:shadow-lg overflow-hidden"
+              style="background-image: url(/images/slide-1.jpg)">
+              <div class="text-3xl text-white mb-2">
+                <span class="p-1 pt-2 bg-black bg-opacity-50">Beasiswa</span></div>
+              <div class="text-white">
+                <span class="p-1 pt-2 bg-black bg-opacity-50">
+                  Caption text here
+                </span>
+              </div>
               <div class="mt-auto">
-                <x-button href="{{ route('single.feature-2', 'beasiswa') }}" color="white">Read more</x-button>
+                <x-button href="{{ route('single.feature-2', 'beasiswa') }}" color="primary">Read more</x-button>
               </div>
             </div>
           </div>

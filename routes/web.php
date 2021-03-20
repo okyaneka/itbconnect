@@ -82,7 +82,66 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::get('/search', function () {
-        return view('search');
+        $users = [
+            (object) [
+                'name' => 'Roland Andira Wala',
+                'profession' => 'Commissioner',
+                'company' => 'PT SAS Andalan Sinergi',
+                'entry_year' => '2005',
+                'major' => 'Teknik Mesin',
+                'profile_photo_url' => url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg'),
+            ],
+            (object) [
+                'name' => 'Alfin Dwisatrio Ilham Fatullah',
+                'profession' => 'Engineer',
+                'company' => 'PT SAS Aero Sishan',
+                'entry_year' => '2016',
+                'major' => 'Teknik Mesin',
+                'profile_photo_url' => url('/images/Alfin Dwisatrio Ilham Fatullah. Teknik mesin 2016 Engineer at PT SAS Aero Sishan.jpeg'),
+            ],
+            (object) [
+                'name' => 'Arya Dipajaya Nugraha',
+                'profession' => 'Engineer',
+                'company' => 'PT SAS Aero Sishan',
+                'entry_year' => '2016',
+                'major' => 'Teknik Mesin',
+                'profile_photo_url' => url('/images/Arya Dipajaya Nugraha. Teknik mesin 2016 Engineer at PT SAS Aero Sishan.jpeg'),
+            ],
+            (object) [
+                'name' => 'Hafid Sidqi Nur Muzwar',
+                'profession' => 'Engineer',
+                'company' => 'PT SAS Aero Sishan',
+                'entry_year' => '2010',
+                'major' => 'Fisika Teknik',
+                'profile_photo_url' => url('/images/Hafid Sidqi Nur Muzwar. Fisika Teknik 2010 Engineer at PT SAS Aero Sishan.jpeg'),
+            ],
+            (object) [
+                'name' => 'Muchammad Nadzar Rizqi Ramadhan',
+                'profession' => 'Engineer',
+                'company' => 'PT SAS Aero Sishan',
+                'entry_year' => '2010',
+                'major' => 'Fisika Teknik',
+                'profile_photo_url' => url('/images/Muchammad Nadzar Rizqi Ramadhan. Fisika Teknik 2010 Engineer at PT SAS Aero Sishan.jpeg'),
+            ],
+            (object) [
+                'name' => 'Rakshidatu Lestaluhu',
+                'profession' => 'Engineer',
+                'company' => 'PT SAS Aero Sishan',
+                'entry_year' => '2005',
+                'major' => 'Teknik Mesin',
+                'profile_photo_url' => url('/images/Rakshidatu Lestaluhu. Teknik Mesin 2005 Engineer at PT SAS Aero Sishan.jpeg'),
+            ],
+            (object) [
+                'name' => 'Wisnu Nurwafi Oktavian',
+                'profession' => 'Engineer',
+                'company' => 'PT SAS Aero Sishan',
+                'entry_year' => '2016',
+                'major' => 'Teknik Mesin',
+                'profile_photo_url' => url('/images/Wisnu Nurwafi Oktavian. Teknik mesin 2016 Engineer at PT SAS Aero Sishan.jpeg'),
+            ],
+        ];
+
+        return view('search', 'users');
     })->name('search');
 
     Route::get('/u/{username}', function ($username) {
@@ -211,7 +270,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('single.news');
 
     Route::get('/ayo-beresin/{slug}', function ($slug) {
-        return view('single.feature-1', compact('slug'));
+        $user = (object) [
+            'name' => 'Roland Andira Wala',
+            'profession' => 'Commissioner',
+            'company' => 'PT SAS Andalan Sinergi',
+            'entry_year' => '2005',
+            'major' => 'Teknik Mesin',
+            'profile_photo_url' => url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg'),
+        ];
+
+        return view('single.feature-1', compact('user'));
     })->name('single.feature-1');
 
     Route::get('/loker-project-beasiswa/{slug}', function ($slug) {

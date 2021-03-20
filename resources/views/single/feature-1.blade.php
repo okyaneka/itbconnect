@@ -11,7 +11,9 @@
             Your article title here
           </div>
 
-          <div class="border border-primary bg-white rounded py-4 px-6 flex space-x-4">
+          <x-user-card :user="$user"></x-user-card>
+
+          {{-- <div class="border border-primary bg-white rounded py-4 px-6 flex space-x-4">
             <div class="rounded-full flex-none h-20 w-20 bg-center bg-cover"
               style="background-image: url(/images/slide-1.jpg)"></div>
             <div class="flex flex-col">
@@ -19,17 +21,12 @@
               <div class="text-primary">Your company here</div>
               <div class="text-gray-500">Angkatan - jurusan</div>
             </div>
-          </div>
+          </div> --}}
 
           <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur nisl ac eros dictum interdum.
             Pellentesque luctus mollis turpis id placerat. Phasellus ultrices dictum pulvinar. </div>
 
-          <div class="flex">
-            <a href="#"
-              class="transition duration-300 text-primary background-transparent hover:text-white hover:bg-primary hover:border-none font-bold uppercase px-3 py-1 border border-current items-center flex focus:border">
-              <div class="mt-1">#AyoBeresinBareng</div>
-            </a>
-          </div>
+          <x-button href="#" class="text-center" color="primary">#AyoBeresinBareng</x-button>
         </div>
       </div>
 
