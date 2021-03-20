@@ -21,11 +21,9 @@
           </x-button>
         </div>
 
-        <div x-show="open" 
-          x-transition:enter="transition ease-out duration-200"
+        <div x-show="open" x-transition:enter="transition ease-out duration-200"
           x-transition:enter-start="transform opacity-0 scale-95"
-          x-transition:enter-end="transform opacity-100 scale-100" 
-          x-transition:leave="transition ease-in duration-75"
+          x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
           x-transition:leave-start="transform opacity-100 scale-100"
           x-transition:leave-end="transform opacity-0 scale-95"
           class="absolute top-12 w-full p-4 shadow-md rounded-md bg-gray-100 z-10">
@@ -63,9 +61,40 @@
       <x-button color="white" icon><i class="ri-search-line"></i></x-button>
     </form>
 
-    <div class="text-lg flex justify-end sm:w-1/5 items-center">
-      <x-button color="transparent-dark" class="h-full hidden sm:block" icon><i
-          class="text-xl ri-question-answer-line"></i></x-button>
+    <div class="text-lg flex justify-end sm:w-1/5 items-center space-x-2">
+      <x-jet-dropdown align="right" width="w-56">
+        <x-slot name="trigger">
+          <x-button color="transparent-dark" class="h-full hidden sm:block" icon><i class="text-xl ri-chat-1-fill"></i>
+          </x-button>
+        </x-slot>
+
+        <x-slot name="content">
+          <div class="block px-4 py-2 text-xs text-gray-400">
+            {{ __('Message') }}
+          </div>
+
+          <x-jet-dropdown-link href="#" class="flex justify-between space-x-2 items-center">
+            <div class="w-8 h-8 rounded-full bg-primary bg-center bg-cover"
+              style="background-image: url('{{ url('/images/Alfin Dwisatrio Ilham Fatullah. Teknik mesin 2016 Engineer at PT SAS Aero Sishan.jpeg') }}')">
+            </div>
+            <div>
+              <div class="font-bold">Alfin Dwisatrio</div>
+              <div>Your message here</div>
+            </div>
+            <div class="w-4 h-4 text-xs flex rounded-full bg-primary text-white items-center justify-center">3</div>
+          </x-jet-dropdown-link>
+          <x-jet-dropdown-link href="#" class="flex justify-between space-x-2 items-center">
+            <div class="w-8 h-8 rounded-full bg-primary bg-center bg-cover"
+              style="background-image: url('{{ url('/images/Arya Dipajaya Nugraha. Teknik mesin 2016 Engineer at PT SAS Aero Sishan.jpeg') }}')">
+            </div>
+            <div>
+              <div class="font-bold">Arya Dipajaya</div>
+              <div>Your message here</div>
+            </div>
+            <div class="w-4 h-4 text-xs flex rounded-full bg-primary text-white items-center justify-center">3</div>
+          </x-jet-dropdown-link>
+        </x-slot>
+      </x-jet-dropdown>
       <x-jet-dropdown align="right" width="48">
         <x-slot name="trigger">
           <div class="flex items-center">
@@ -97,8 +126,9 @@
             {{ __('Profile') }}
           </x-jet-dropdown-link>
 
-          <x-jet-dropdown-link class="sm:hidden block" href="#">
-            {{ __('Message') }}
+          <x-jet-dropdown-link class="sm:hidden block flex justify-between" href="#">
+            {{ __('Message') }} <span
+              class="h-4 w-4 bg-primary text-white flex items-center justify-center rounded-full">2</span>
           </x-jet-dropdown-link>
 
           @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

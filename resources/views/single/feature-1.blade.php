@@ -104,14 +104,14 @@
             <i class="ri-arrow-left-line mr-2"></i>
             <div class="mt-1">Prev Post</div>
           </div>
-          <a href="#" class="hover:underline">Topik Blog Meningkatkan Pengunjung</a>
+          <a href="#" class="hover:underline">Alumni Gathering MAB</a>
         </div>
         <div class="text-right">
           <div class="text-gray-400 flex items-center justify-end">
             <div class="mt-1">Next Post</div>
             <i class="ri-arrow-right-line ml-2"></i>
           </div>
-          <a href="#" class="hover:underline">Riset Keyword</a>
+          <a href="#" class="hover:underline">FITB Talks: Sehari Mengenal FITB Lebih Dekat</a>
         </div>
       </div>
     </div>
