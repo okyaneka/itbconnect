@@ -141,7 +141,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             ],
         ];
 
-        return view('search', 'users');
+        return view('search', compact('users'));
     })->name('search');
 
     Route::get('/u/{username}', function ($username) {
