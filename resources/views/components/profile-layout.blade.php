@@ -19,7 +19,7 @@
   <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+<body class="font-sans text-gray-800 antialiased">
   <x-jet-banner />
 
   <div class="bg-primary text-white fixed w-full h-14 top-0 left-0 px-4 items-center flex">
@@ -31,7 +31,7 @@
   </div>
   
   <div class="flex">
-    <div class="mt-14 w-64 bg-primary-500 bg-opacity-20 fixed overflow-y-auto shadow border-gray-300 border-r" style="height: calc(100vh - 56px)">
+    <div class="mt-14 w-64 bg-primary-50 fixed overflow-y-auto shadow border-gray-300 border-r" style="height: calc(100vh - 56px)">
       <div class="py-8 flex items-center flex-col space-y-4">
         <div
           class="rounded-full flex-none md:h-24 md:w-24 h-20 w-20 bg-primary bg-center bg-cover border-2 border-primary"

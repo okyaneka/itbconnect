@@ -82,7 +82,7 @@
 				<label class="block w-1/4 mt-2" for="adress">{{ __('Address') }}</label>
 				<textarea
 					class="block w-3/4 resize-none border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-					id="adress" class="block mt-1 w-3/4" type="text" name="adress" rows="3"
+					id="adress" type="text" name="adress" rows="3"
 					required>{{ old('adress') }}</textarea>
 			</div>
 
@@ -147,7 +147,7 @@
 		<div class="flex flex-col space-y-4">
 			<div class="font-bold capitalize">{{ __('Experience') }}</div>
 
-			<table class="table-auto border-collapse">
+			<table class="w-full border-collapse">
 				<thead>
 					<tr>
 						<th class="border p-2 w-2 whitespace-nowrap">No</th>
@@ -216,7 +216,7 @@
 		<div class="flex flex-col space-y-4">
 			<div class="font-bold capitalize">{{ __('Education') }}</div>
 
-			<table class="table-auto border-collapse">
+			<table class="w-full border-collapse">
 				<thead>
 					<tr>
 						<th class="border p-2 w-2 whitespace-nowrap">No</th>
@@ -287,7 +287,7 @@
 		<div class="flex flex-col space-y-4">
 			<div class="font-bold capitalize">{{ __('interests and organization') }}</div>
 
-			<table class="table-auto border-collapse">
+			<table class="w-full border-collapse">
 				<thead>
 					<tr>
 						<th class="border p-2 w-2 whitespace-nowrap">No</th>

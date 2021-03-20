@@ -4,18 +4,18 @@
       <div class="relative flex h-full">
         <div class="absolute w-full h-full overflow-hidden">
           <div class="flex flex-nowrap h-full w-full transition-all ease-in-out duration-1000 slide relative left-0">
-            <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
+            <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-top bg-no-repeat bg-cover"
               style="background-image: url('{{ url('/images/ITB Connect_Web-alt size.png') }}')">
-              <div class="sm:max-w-xs md:max-w-sm lg:max-w-md w-full">
+              <div class="hidden md:block sm:max-w-sm md:max-w-sm lg:max-w-md w-full">
                 <div class="text-3xl p-4 rounded bg-black bg-opacity-50">
                   Bertemu Jejaring Baru, Bangun Hubungan Baik, Ciptakan Peluang. Dari dan Untuk Alumni ITB!
                 </div>
               </div>
             </div>
             <div
-              class="w-full h-full bg-red-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
+              class="w-full h-full bg-red-500 text-white flex flex-none items-center px-16 bg-top bg-no-repeat bg-cover"
               style="background-image: url('{{ url('/images/ITB Connect2_Web-alt size.png') }}')">
-              <div class="sm:max-w-xs md:max-w-sm lg:max-w-md w-full">
+              <div class="hidden md:block sm:max-w-sm md:max-w-sm lg:max-w-md w-full">
                 <div class="text-3xl p-4 rounded bg-black bg-opacity-50">
                   Connect Everyone Dots! Bertemu, Berideasi, Rencanakan Kegiatan, Buat Pergerakan. Berbagi dan Dapatkan
                   Informasi Loker, Project dan Beasiswa.
@@ -23,9 +23,9 @@
               </div>
             </div>
             <div
-              class="w-full h-full bg-primary text-white flex flex-none items-center px-16 bg-center bg-cover"
+              class="w-full h-full bg-primary text-white flex flex-none items-center px-16 bg-top bg-no-repeat bg-cover"
               style="background-image: url('{{ url('/images/ITB Connect3_Web-alt size.png') }}')">
-              <div class="sm:max-w-xs md:max-w-sm lg:max-w-md w-full">
+              <div class="hidden md:block sm:max-w-sm md:max-w-sm lg:max-w-md w-full">
                 <div class="text-3xl p-4 rounded bg-black bg-opacity-50">
                   Connect All The Dots! Menghubungkan Semua Alumni ITB Lintas Jurusan, Angkatan dan Profesi.
                 </div>
@@ -70,7 +70,7 @@
     </script>
   </div>
 
-  <div class="container m-16 flex md:justify-end justify-center">
+  <div class="container sm:m-16 m-4 flex md:justify-end justify-center">
     <div class="border bg-white bg-opacity-90 shadow-md rounded-lg">
       <div class="md:max-w-sm max-w-md p-6 w-full">
         {{ $slot }}
