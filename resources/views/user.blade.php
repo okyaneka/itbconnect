@@ -67,7 +67,9 @@
               <tr>
                 <td class="align-top font-bold text-right">Alamat</td>
                 <td class="align-top px-2">:</td>
-                <td class="align-top">Raffles Hills E3/2</td>
+                <td class="align-top">
+                  ********* <x-button color="primary">request info</x-button>
+                </td>
               </tr>
               <tr>
                 <td class="align-top font-bold text-right">Email</td>

@@ -1,6 +1,6 @@
 <x-app-layout>
   <div id="slider-1" class="w-full h-96">
-    <div x-data="{popup: false, active: 1}" class="relative flex h-full">
+    <div x-data="{popup: false, invite: false, active: 1}" class="relative flex h-full" x-init="setTimeout(() => { popup = true }, 500);">
       <div class="absolute w-full h-full overflow-hidden">
         <div class="flex flex-nowrap h-full w-full transition-all ease-in-out duration-1000 slide relative left-0">
           <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
@@ -14,7 +14,7 @@
                   Undang teman untuk bergabung dengan itbconnect.org
                 </div>
                 <div class="mt-4">
-                  <div @click="popup = true">
+                  <div @click="invite = true">
                     <x-button href="#" color="primary">Undang Teman</x-button>
                   </div>
                 </div>
@@ -32,7 +32,7 @@
                   Undang teman untuk bergabung dengan itbconnect.org
                 </div>
                 <div class="mt-4">
-                  <div @click="popup = true">
+                  <div @click="invite = true">
                     <x-button href="#" color="primary">Undang Teman</x-button>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                   Undang teman untuk bergabung dengan itbconnect.org
                 </div>
                 <div class="mt-4">
-                  <div @click="popup = true">
+                  <div @click="invite = true">
                     <x-button href="#" color="primary">Undang Teman</x-button>
                   </div>
                 </div>
@@ -66,12 +66,12 @@
           class="ri-arrow-right-s-fill"></i>
       </x-button-icon>
 
-      <div x-show="popup" x-transition:enter="transition ease-out duration-200"
+      <div x-show="invite" x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
         x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
         x-transition:leave-end="transform opacity-0 scale-95"
         class="fixed h-screen w-screen bg-primary top-0 left-0 bg-opacity-50 flex items-center justify-center">
-        <div class="w-96 p-4 bg-white border rounded" @click.away="popup = false" @close.stop="popup = false">
+        <div class="w-96 p-4 bg-white border rounded" @click.away="invite = false" @close.stop="invite = false">
           <div>
             <x-jet-label for="email" value="{{ __('Masukkan alamat email teman') }}" />
             <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
@@ -79,13 +79,32 @@
           </div>
 
           <div class="mt-4">
-            <div @click="popup = false">
+            <div @click="invite = false">
               <x-button href="#" color="primary">Undang Teman</x-button>
             </div>
           </div>
         </div>
       </div>
+      <div x-show="popup" x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95"
+        class="fixed h-screen w-screen bg-primary top-0 left-0 bg-opacity-50 flex items-center justify-center z-10">
+        <div class="w-96 p-4 bg-white border rounded" @click.away="popup = false" @close.stop="popup = false">
+          <img class="w-4/5 object-contain mx-auto" src="{{ url('/images/logo header.png') }}" />
+          <div>Ini adalah Prototipe dari Platform Connecting The Dots. Beberapa Fitur
+            Masih Dalam Tahap Pengembangan
+            Ini adalah prototipe dari </div>
+
+          <div class="mt-4 text-center">
+            <div @click="popup = false">
+              <x-button href="#" color="primary">Tutup</x-button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script>
       window.addEventListener('load', (event) => {
         let slide = document.querySelector('#slider-1 .slide');
@@ -136,10 +155,9 @@
         <div class="wrapper h-56">
           <div
             class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
-            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'News #'.($i + 1)"
-              href="{{ route('single.news', 'news-'.$i) }}">
-              </x-article-card>
-              @endfor
+            @foreach ($articles as $article)
+            <x-article-card :article="$article" />
+            @endforeach
           </div>
         </div>
 
@@ -161,10 +179,9 @@
         <div class="wrapper h-56">
           <div
             class="content h-full absolute flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
-            @for ($i = 0; $i < 3; $i++) <x-article-card :article="'Gerakan #'.($i + 1)"
-              href="{{ route('single.feature-1', 'ayo-beresin') }}">
-              </x-article-card>
-              @endfor
+            @foreach ($features as $feature)
+            <x-article-card :article="$feature" type="feature-1" />
+            @endforeach
           </div>
         </div>
 

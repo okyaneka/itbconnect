@@ -2,12 +2,12 @@
   <div class="w-full h-96">
     <div class="relative flex h-full">
       <div class="w-full h-full bg-pink-500 text-white flex items-center bg-center bg-cover"
-        style="background-image: url(/images/slide-1.jpg)">
+        style="background-image: url('{{ url('/images/news/Anak Gajah Pulang Kandang.jpg') }}')">
         <div class="w-full h-full flex items-center justify-center flex-col bg-black bg-opacity-40">
           <div class="container flex flex-col">
             <div class="md:w-3/4 w-full p-4 mx-auto">
               <div class="text-5xl">
-                Your article title here
+                Anak Gajah Pulang Kandang
               </div>
               <div class="text-xl">
                 by <a href="#" class="font-bold hover:underline">Admin itbconnect</a>
@@ -86,7 +86,8 @@
           Ut ut libero purus. Morbi id posuere ante. In nisl elit, ultrices at mauris non, consequat mattis lectus. Sed
           odio nisl, interdum et tempus ut, rutrum vel libero. Maecenas mauris ex, hendrerit sit amet arcu at, interdum
           accumsan ligula. Proin posuere arcu magna, et pulvinar nisl dignissim eu. </p>
-        <img class="bg-white p-2 border rounded" src="{{ url('images/Sketch_Ai-03.png') }}" alt="" srcset="">
+        <img class="bg-white p-2 border rounded" src="{{ url('/images/news/Anak Gajah Pulang Kandang.jpg')  }}" alt=""
+          srcset="">
         <p>Donec id ante ut leo lobortis interdum. Vivamus leo justo, semper non ex sed, pulvinar egestas felis. Ut in
           magna quis dui pellentesque facilisis ac ac leo. </p>
       </div>

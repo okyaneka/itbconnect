@@ -32,18 +32,27 @@
               <x-jet-label for="major" value="{{ __('Major') }}" />
               <x-select class="block mt-1 w-full" name="major" id="major">
                 <option disabled selected>{{ __('Please select one') }}</option>
+                @foreach ($majors as $major)
+                <option {{ $major->disabled }}>{{ $major->text }}</option>
+                @endforeach
               </x-select>
             </div>
             <div>
               <x-jet-label for="profession" value="{{ __('Profession') }}" />
               <x-select class="block mt-1 w-full" name="profession" id="profession">
                 <option disabled selected>{{ __('Please select one') }}</option>
+                @foreach ($profs as $prof)
+                <option>{{ $prof }}</option>
+                @endforeach
               </x-select>
             </div>
             <div>
               <x-jet-label for="businnes" value="{{ __('Field of business') }}" />
               <x-select class="block mt-1 w-full" name="businnes" id="businnes">
                 <option disabled selected>{{ __('Please select one') }}</option>
+                @foreach ($business_field as $business)
+                <option>{{ $business }}</option>
+                @endforeach
               </x-select>
             </div>
           </div>

@@ -70,7 +70,7 @@
     </script>
   </div>
 
-  <div class="container sm:m-16 m-4 flex md:justify-end justify-center">
+  <div class="container flex md:justify-end justify-center">
     <div class="border bg-white bg-opacity-90 shadow-md rounded-lg">
       <div class="md:max-w-sm max-w-md p-6 w-full">
         {{ $slot }}

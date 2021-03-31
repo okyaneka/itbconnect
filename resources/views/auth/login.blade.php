@@ -2,6 +2,8 @@
   <x-jet-authentication-card>
     <div class="font-medium text-3xl mb-4">{{ __('Login') }}</div>
     <div>{{ __('login_instruction', ['app_name' => config('app.name')]) }}</div>
+    <div>email: guest@itbconnect.org</div>
+    <div>password: password</div>
 
     <x-jet-validation-errors class="mb-4" />
 

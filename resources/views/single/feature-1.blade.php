@@ -3,12 +3,12 @@
     <div class="container my-8 px-4 space-y-4">
       <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
         <div class="bg-white p-2 border rounded flex items-center">
-          <img src="{{ url('images/Sketch_Ai-03.png') }}" alt="" srcset="">
+          <img src="{{ url('/images/features/Poster Ayo Beresin Bareng_Donor Darah Untuk Bangsa.jpeg') }}" alt="" srcset="">
         </div>
 
         <div class="flex flex-col space-y-4">
           <div class="text-2xl">
-            Your article title here
+            Donor Darah Untuk Bangsa
           </div>
 
           <x-user-card :user="$user"></x-user-card>
