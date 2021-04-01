@@ -1,6 +1,7 @@
 <x-app-layout>
   <div id="slider-1" class="w-full h-96">
-    <div x-data="{popup: false, invite: false, active: 1}" class="relative flex h-full" x-init="setTimeout(() => { popup = true }, 500);">
+    <div x-data="{popup: false, invite: false, active: 1}" class="relative flex h-full"
+      x-init="setTimeout(() => { popup = true }, 500);">
       <div class="absolute w-full h-full overflow-hidden">
         <div class="flex flex-nowrap h-full w-full transition-all ease-in-out duration-1000 slide relative left-0">
           <div class="w-full h-full bg-pink-500 text-white flex flex-none items-center px-16 bg-center bg-cover"
@@ -92,9 +93,8 @@
         class="fixed h-screen w-screen bg-primary top-0 left-0 bg-opacity-50 flex items-center justify-center z-10">
         <div class="w-96 p-4 bg-white border rounded" @click.away="popup = false" @close.stop="popup = false">
           <img class="w-4/5 object-contain mx-auto" src="{{ url('/images/logo header.png') }}" />
-          <div>Ini adalah Prototipe dari Platform Connecting The Dots. Beberapa Fitur
-            Masih Dalam Tahap Pengembangan
-            Ini adalah prototipe dari </div>
+          <div>Ini adalah Prototipe dari Platform Connecting The Dots. Beberapa Fitur Masih Dalam Tahap Pengembangan.
+          </div>
 
           <div class="mt-4 text-center">
             <div @click="popup = false">

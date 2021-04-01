@@ -70,10 +70,21 @@
     </script>
   </div>
 
-  <div class="container flex md:justify-end justify-center">
+  <div class="container flex md:justify-end justify-center p-4">
     <div class="border bg-white bg-opacity-90 shadow-md rounded-lg">
       <div class="md:max-w-sm max-w-md p-6 w-full">
         {{ $slot }}
+      </div>
+    </div>
+  </div>
+
+  <div class="sm:absolute bottom-0 left-0">
+    <div class="container mt-auto mb-0 sm:mb-8">
+      <div class="mx-8">
+        <div class="text-lg text-uppercase text-white">
+          {{ env('APP_SHORT_NAME', 'APP_NAME') }} @ 2021 by <img class="h-12 inline-block align-middle"
+            src="/images/logo.png" alt="">
+        </div>
       </div>
     </div>
   </div>
