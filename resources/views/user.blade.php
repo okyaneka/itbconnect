@@ -2,7 +2,7 @@
   <div class="w-full h-96">
     <div class="relative flex h-full">
       <div class="w-full h-full bg-pink-500 text-white flex items-center bg-center bg-cover"
-        style="background-image: url(/images/slide-2.jpg)"></div>
+        style="background-image: url('{{ url('/images/banners/header_profil_roland.jpg') }}')"></div>
     </div>
   </div>
 

@@ -2,10 +2,12 @@
   <div class="container mt-4">
     <div class="flex flex-col sm:flex-row m-4">
       <div class="flex flex-col space-y-2 p-4 w-full">
-        <div class="text-2xl text-bold">More about company</div>
+        <div class="text-2xl text-bold">About ITBConnect.org</div>
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia vitae nisl eu consectetur. Sed eu
-          ipsum facilisis, laoreet purus eget, dignissim augue. </div>
+          Adalah prototipe dari platform Connecting The Dots. Bangun jejaring baru, bertemu dengan alumni dengan
+          kesamaan minat, profesi dll. Jaring ide, rencanakan kegiatan, buat jadi nyata. Saling mengisi dan melengkapi
+          antar alumni ITB.
+        </div>
       </div>
       <div class="flex flex-col space-y-2 p-4 sm:w-3/5 w-full">
         <div class="text-2xl text-bold">Keep connected</div>

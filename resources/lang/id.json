@@ -1,6 +1,6 @@
 {
   "Login": "Masuk",
-  "login_instruction": "Isilah form username dan password dibawah ini untuk mengakses aplikasi :app_name",
+  "login_instruction": "Selamat datang di prototipe Connecting The Dots. Akses menggunakan email dan password berikut.",
   "register_instruction": "Silahkan mengisi data anda dibawah ini untuk register :app_name",
   "Account Information": "Informasi Akun",
   "Alumni Information": "Informasi Alumni",

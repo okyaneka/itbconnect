@@ -204,9 +204,16 @@
           <div
             class="content absolute h-full flex flex-nowrap space-x-4 transition-all ease-in-out duration-1000 slide left-0">
             {{-- Loker --}}
+            @foreach ([
+            'poster-1.png',
+            'poster-2.png',
+            'poster-3.jpeg',
+            'poster-4.png',
+            ] as $poster)
             <div
               class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md bg-cover bg-center hover:shadow-lg overflow-hidden"
-              style="background-image: url(/images/slide-1.jpg)">
+              style="background-image: url('{{ url('/images/features/'.$poster) }}')">
+              @if (false)
               <div class="text-3xl text-white mb-2">
                 <span class="p-1 pt-2 bg-black bg-opacity-50">Loker</span></div>
               <div class="text-white">
@@ -214,10 +221,15 @@
                   Caption text here
                 </span>
               </div>
+              @endif
               <div class="mt-auto">
                 <x-button href="{{ route('single.feature-2', 'loker') }}" color="primary">Read more</x-button>
               </div>
             </div>
+            @endforeach
+
+            {{-- SEMBUNYIIN DULU --}}
+            @if (false)
             {{-- Project --}}
             <div
               class="p-4 flex-none border-2 border-gray-800 flex flex-col w-96 rounded-lg shadow-md bg-cover bg-center hover:shadow-lg overflow-hidden"
@@ -248,6 +260,8 @@
                 <x-button href="{{ route('single.feature-2', 'beasiswa') }}" color="primary">Read more</x-button>
               </div>
             </div>
+            @endif
+
           </div>
         </div>
 

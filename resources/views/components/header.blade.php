@@ -26,8 +26,8 @@
           x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
           x-transition:leave-start="transform opacity-100 scale-100"
           x-transition:leave-end="transform opacity-0 scale-95"
-          class="absolute top-12 w-full p-4 shadow-md rounded-md bg-gray-100 z-10">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+          class="absolute w-screen -left-4 sm:left-0 top-12 sm:w-full p-4 shadow-md rounded-md bg-gray-100 z-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
             <div>
               <x-jet-label for="major" value="{{ __('Major') }}" />
               <x-select class="block mt-1 w-full" name="major" id="major">
@@ -52,6 +52,33 @@
                 <option disabled selected>{{ __('Please select one') }}</option>
                 @foreach ($business_field as $business)
                 <option>{{ $business }}</option>
+                @endforeach
+              </x-select>
+            </div>
+            <div>
+              <x-jet-label for="interests" value="{{ __('interests and organization') }}" />
+              <x-select class="block mt-1 w-full" name="interests" id="interests">
+                <option disabled selected>{{ __('Please select one') }}</option>
+                @foreach ($interests as $interest)
+                <option>{{ $interest }}</option>
+                @endforeach
+              </x-select>
+            </div>
+            <div>
+              <x-jet-label for="pengda" value="{{ 'Pengda & Komisariat' }}" />
+              <x-select class="block mt-1 w-full" name="pengda" id="pengda">
+                <option disabled selected>{{ __('Please select one') }}</option>
+                @foreach ($pengdas as $pengda)
+                <option>{{ $pengda }}</option>
+                @endforeach
+              </x-select>
+            </div>
+            <div>
+              <x-jet-label for="IA" value="{{ __('IA Prodi') }}" />
+              <x-select class="block mt-1 w-full" name="IA" id="IA">
+                <option disabled selected>{{ __('Please select one') }}</option>
+                @foreach ($IAs as $IA)
+                <option>{{ $IA }}</option>
                 @endforeach
               </x-select>
             </div>

@@ -22,19 +22,19 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         $users = [
             (object) [
                 'name' => 'Abdul Luky Shofiul Azmi',
-                'profession' => 'Dosen',
-                'company' => 'ITB',
+                'profession' => 'Director',
+                'company' => 'PT.  LybraTek (EPC)',
                 'entry_year' => '2003 ',
                 'major' => 'Teknik Mesin',
-                'profile_photo_url' => url('/images/users/Abdul Luky Shofiul Azmi-Teknik Mesin 2003 - Dosen-ITB.jpg'),
+                'profile_photo_url' => url('/images/users/Abdul LukyShofiul Azmi Teknik Mesin 2003 Director at PT. LybraTek (EPC).jpeg'),
             ],
             (object) [
-                'name' => 'Harits M Albar',
-                'profession' => 'Risk Consulting',
-                'company' => 'Pricewaterhouse Cooper Indonesia',
-                'entry_year' => '2014',
-                'major' => 'Matematika',
-                'profile_photo_url' => url('/images/users/Harits M Albar-Matematika 2014-Risk Consulting-Pricewaterhouse Cooper Indonesia.jpg'),
+                'name' => 'Taufik Adityawarman',
+                'profession' => 'Pengembangan & Produksi',
+                'company' => 'PT Pertamina HE',
+                'entry_year' => '1986',
+                'major' => 'Teknik Mesin',
+                'profile_photo_url' => url('/images/users/Taufik Adityawarman, Teknik Mesin 1986 Direktur Pengembangan _ Produksi PT Pertamina HE.jpg'),
             ],
             (object) [
                 'name' => 'Lovanda Sebayang',
@@ -61,7 +61,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 'profile_photo_url' => url('/images/users/Roland Andira Wala -Teknik Mesin 2005-Commissioner-PT SAS Andalan Sinergi.jpg'),
             ],
             (object) [
-                'name' => 'Rudy Andiyana',
+                'name' => 'Rudy Andriyana',
                 'profession' => 'Founder',
                 'company' => 'PT Daun Biru Engineering',
                 'entry_year' => '1994',
@@ -422,12 +422,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/ayo-beresin/{slug}', function ($slug) {
         $user = (object) [
-            'name' => 'Roland Andira Wala',
-            'profession' => 'Commissioner',
-            'company' => 'PT SAS Andalan Sinergi',
-            'entry_year' => '2005',
-            'major' => 'Teknik Mesin',
-            'profile_photo_url' => url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg'),
+            'name' => 'Vitex Grandis',
+            'profession' => '1988_Direktur',
+            'company' => 'PT. Buatan Guna Indonesia',
+            'entry_year' => '1988',
+            'major' => '',
+            'profile_photo_url' => url('/images/users/Vitex Grandis_Geodesi 1988_Direktur PT. Buatan Guna Indonesia.jpeg'),
         ];
 
         return view('single.feature-1', compact('user'));
@@ -435,12 +435,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/loker-project-beasiswa/{slug}', function ($slug) {
         $user = (object) [
-            'name' => 'Roland Andira Wala',
-            'profession' => 'Commissioner',
-            'company' => 'PT SAS Andalan Sinergi',
-            'entry_year' => '2005',
-            'major' => 'Teknik Mesin',
-            'profile_photo_url' => url('/images/Roland Andira Wala Teknik Mesin 2005 Commissioner at PT SAS Andalan Sinergi.jpg'),
+            'name' => 'Dwi Larso',
+            'profession' => 'Direktur',
+            'company' => 'Beasiswa LPDP',
+            'entry_year' => '1986',
+            'major' => 'Teknik Industri',
+            'profile_photo_url' => url('/images/users/Dwi Larso_Teknik Industri 1986_Direktur Beasiswa LPDP.jpg'),
         ];
 
         return view('single.feature-2', compact('user'));

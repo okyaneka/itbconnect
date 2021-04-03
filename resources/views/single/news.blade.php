@@ -2,15 +2,15 @@
   <div class="w-full h-96">
     <div class="relative flex h-full">
       <div class="w-full h-full bg-pink-500 text-white flex items-center bg-center bg-cover"
-        style="background-image: url('{{ url('/images/news/Anak Gajah Pulang Kandang.jpg') }}')">
+        style="background-image: url('{{ url('/images/news/header_kabar_alumni.jpg') }}')">
         <div class="w-full h-full flex items-center justify-center flex-col bg-black bg-opacity-40">
           <div class="container flex flex-col">
             <div class="md:w-3/4 w-full p-4 mx-auto">
               <div class="text-5xl">
-                Anak Gajah Pulang Kandang
+                IndonesianIsME Summit
               </div>
               <div class="text-xl">
-                by <a href="#" class="font-bold hover:underline">Admin itbconnect</a>
+                by <a href="#" class="font-bold hover:underline">Admin ITB Connect</a>
               </div>
             </div>
           </div>
@@ -67,29 +67,21 @@
       </div>
 
       <div class="space-y-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non arcu auctor luctus. Maecenas tempus
-          pellentesque ullamcorper. Duis auctor congue eros, non consequat nunc elementum in. Proin a ipsum tempus,
-          sollicitudin sem non, scelerisque quam. Nullam ut risus vitae turpis ornare pharetra. Nulla non sapien
-          facilisis
-          tellus rutrum pellentesque quis in eros. Donec ac dui id metus suscipit iaculis. Proin arcu tortor, luctus nec
-          quam sit amet, feugiat tempor arcu. Donec non risus imperdiet, venenatis ipsum venenatis, maximus justo.
-          Nullam
-          et massa quis augue interdum faucibus vel a dolor. Morbi dictum tortor ornare, egestas enim a, bibendum
-          lectus.
-          Etiam at finibus arcu, in aliquet libero. Sed nunc odio, blandit a tortor sed, consequat venenatis tellus.
+        <p>IA ITB mendorong penguasaan teknologi dan industri oleh insan Indonesia dengan senantiasa menggaungkan pesan
+          ini sejak 2016 dengan semangat IndonesianIsMe demi terwujudnya Kebangkitan Teknologi di Indonesia. Setelah
+          sukses dengan Indonesianisme Summit 2016 sampai 2019, IA-ITB melanjutkan spirit kedaulatan indonesianisme,
+          bekerjasama dengan Metro TV, menyelenggarakan i-TECH FORUM dengan Tema Kekayaan Mineral untuk Indonesia Maju :
+          Dari Nikel ke Kendaraan Listrik.
         </p>
-        <p>Suspendisse quis elementum orci, sit amet pulvinar magna. Maecenas faucibus nisi at vestibulum aliquam.
-          Aliquam
-          consequat ex nisl, ac bibendum neque faucibus auctor. Suspendisse ut sagittis metus. Phasellus vel porta
-          augue.
-          Ut ut libero purus. Morbi id posuere ante. In nisl elit, ultrices at mauris non, consequat mattis lectus. Sed
-          odio nisl, interdum et tempus ut, rutrum vel libero. Maecenas mauris ex, hendrerit sit amet arcu at, interdum
-          accumsan ligula. Proin posuere arcu magna, et pulvinar nisl dignissim eu. </p>
-        <img class="bg-white p-2 border rounded" src="{{ url('/images/news/Anak Gajah Pulang Kandang.jpg')  }}" alt=""
+        <img class="bg-white p-2 border rounded" src="{{ url('/images/news/konten_artikel_kabar_alumni.png')  }}" alt=""
           srcset="">
-        <p>Donec id ante ut leo lobortis interdum. Vivamus leo justo, semper non ex sed, pulvinar egestas felis. Ut in
-          magna quis dui pellentesque facilisis ac ac leo. </p>
+        <p>Pada i-TECH FORUM episode 2 ini diharapkan memberikan gambaran mengenai rencana dan strategi hilirisasi
+          mineral terutama nikel baik jangka pendek maupun jangka panjang, serta mendorong penguasaan teknologi
+          pertambangan, pengolahan dan mengembangkan serta meningkatkan potensi kandungan sumber daya alam dalam negeri.
+        </p>
+
+        <p><b><i>"Kekayaan alam Indonesia yang dulu adalah kekayaan komparatif, sedang diupayakan menjadi keunggulan
+              kompetitif"</i></b> </p>
       </div>
 
       <x-jet-section-border />
@@ -100,14 +92,14 @@
             <i class="ri-arrow-left-line mr-2"></i>
             <div class="mt-1">Prev Post</div>
           </div>
-          <a href="#" class="hover:underline">Alumni Gathering MAB</a>
+          <a href="#" class="hover:underline">Anak Gajah Pulang Kandang 2019</a>
         </div>
         <div class="text-right">
           <div class="text-gray-400 flex items-center justify-end">
             <div class="mt-1">Next Post</div>
             <i class="ri-arrow-right-line ml-2"></i>
           </div>
-          <a href="#" class="hover:underline">FITB Talks: Sehari Mengenal FITB Lebih Dekat</a>
+          <a href="#" class="hover:underline">Turnamen Futsal IA-ITB</a>
         </div>
       </div>
 
