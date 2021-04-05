@@ -46,6 +46,7 @@
         </x-button>
       </div>
 
+      @if (false)
       <div class="grid grid-cols-1 gap-2 mt-4">
         <div class="text-gray-600 text-center">{{ __('Dont have an account?') }}</div>
         <a class="block px-4 pt-3 pb-2 border-transparent border rounded-md text-center font-semibold text-sm text-grey-200 uppercase tracking-widest bg-yellow hover:bg-yellow-500 active:bg-yellow-600 focus:outline-none focus:bg-yellow-600 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150"
@@ -53,6 +54,7 @@
           {{ __('Register') }}
         </a>
       </div>
+      @endif
     </form>
   </x-jet-authentication-card>
 </x-guest-layout>

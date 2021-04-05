@@ -440,7 +440,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             'company' => 'Beasiswa LPDP',
             'entry_year' => '1986',
             'major' => 'Teknik Industri',
-            'profile_photo_url' => url('/images/users/Dwi Larso_Teknik Industri 1986_Direktur Beasiswa LPDP.jpg'),
+            'profile_photo_url' => url('/images/users/Dwi Larso_TI 86_Direktur Beasiswa LPDP.png'),
         ];
 
         return view('single.feature-2', compact('user'));
